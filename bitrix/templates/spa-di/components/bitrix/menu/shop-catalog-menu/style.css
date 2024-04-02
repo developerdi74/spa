@@ -1,0 +1,239 @@
+/**Top menu**/
+#horizontal-multilevel-menu,#horizontal-multilevel-menu ul
+{
+	margin:0;
+	padding:10px 20px;
+	background:#7faca5 url(https://spa-di.ru/local/templates/main/images/green-bg.png) repeat-x;
+	width:100%;
+	list-style:none;
+	font-size:11px;
+	float:left;
+	/*font-size:90%*/
+}
+
+#horizontal-multilevel-menu{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/*Links*/
+#horizontal-multilevel-menu a
+{
+	display:block;
+	padding:5px 10px;
+	/*padding:0.3em 0.8em;*/
+	text-decoration:none;
+	text-align:center;
+}
+
+#horizontal-multilevel-menu li
+{
+	transition: all 0.3s;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	align-content: center;
+	flex-wrap: nowrap;
+}
+
+/*Root items*/
+#horizontal-multilevel-menu li a.root-item
+{
+	color:#fff;
+	font-weight: 700;
+	padding:7px 12px;
+	font-size: 14px;
+	transition: all 0.8s;
+}
+
+/*Root menu selected*/
+#horizontal-multilevel-menu li a.root-item-selected
+{
+	font-weight: 900;
+	padding: 7px 12px;
+	font-size: 14px;
+	transition: all 0.5s;
+	color: #000;
+}
+
+/*Root items: hover*/
+#horizontal-multilevel-menu li:hover a.root-item, #horizontal-multilevel-menu li.jshover a.root-item
+{
+	background: none;
+	color:#000;
+	scale: 1.1;
+	transition: all 0.8s;
+}
+
+/*Item-parents*/
+#horizontal-multilevel-menu a.parent:after{
+	position: absolute;
+	content: "";
+	margin-left: 13px;
+	z-index: 1000;
+	background: url(images/arrow.gif) center right no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 100%;
+}
+
+/*Denied items*/
+#horizontal-multilevel-menu a.denied
+{
+	background: url(images/lock.gif) center right no-repeat;
+}
+
+/*Child-items: hover*/
+#horizontal-multilevel-menu li:hover, #horizontal-multilevel-menu li.jshover
+{
+	background:none;
+}
+.icon-open{
+	height: 20px;
+	display: inline-block;
+	width: 20px;
+	position: relative;
+	cursor: pointer;
+}
+.icon-open:after,.icon-open:before{
+	content: "";
+	background-color: #fff;
+	height: 2px;
+	width: 20px;
+	position: absolute;
+	top: calc( 50% - 1px );
+	left: 0;
+}
+.icon-open:before{
+	height: 20px;
+	width: 2px;
+	top: 0;
+	left: calc( 50% - 1px );
+}
+
+/*Child-items selected*/
+#horizontal-multilevel-menu li.item-selected
+{
+	background:#D6D6D6;
+	color:#fff;
+}
+
+/*Sub-menu box*/
+#horizontal-multilevel-menu li ul
+{
+	position: absolute;
+	top: 100%;
+	bottom: auto;
+	display: none;
+	z-index: 500;
+	height: auto;
+	width: auto;
+	background: #ffffff;
+	border: 1px solid #C1C1C1;
+	left: 50%;
+	box-shadow: 0px 5px 22px -8px #000;
+}
+
+/*Sub-menu item box*/
+#horizontal-multilevel-menu li li
+{
+	width:auto;
+	border-bottom:1px solid #DEDEDE;
+}
+
+/*Item link*/
+#horizontal-multilevel-menu li ul a
+{
+	width: max-content;
+	text-align:left;
+	font-size: 14px;
+}
+#horizontal-multilevel-menu .child-1>li{
+	position: relative;
+}
+/*Items text color & size */
+#horizontal-multilevel-menu li a,
+#horizontal-multilevel-menu li:hover li a,
+#horizontal-multilevel-menu li.jshover li a,
+#horizontal-multilevel-menu li:hover li:hover li a,
+#horizontal-multilevel-menu li.jshover li.jshover li a,
+#horizontal-multilevel-menu li:hover li:hover li:hover li a,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li a,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li a,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li a,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li a,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li a
+{
+	color:#4F4F4F;
+	font-weight:bold;
+}
+
+/*Items text color & size: hover*/
+#horizontal-multilevel-menu li:hover li:hover a,
+#horizontal-multilevel-menu li.jshover li.jshover a,
+#horizontal-multilevel-menu li:hover li:hover li:hover a,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover a,
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover a,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover a
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover a,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover a
+#horizontal-multilevel-menu li:hover li:hover li:hover li:hover li:hover li:hover a,
+#horizontal-multilevel-menu li.jshover li.jshover li.jshover li.jshover li.jshover li.jshover a
+{
+	color:#4F4F4F;
+}
+
+#horizontal-multilevel-menu li ul ul{
+	display: block;
+	top: -1px;
+	right: auto;
+	left: 100%;
+	margin-left: 22px;
+}
+
+#horizontal-multilevel-menu li:hover ul ul,
+#horizontal-multilevel-menu li.jshover ul ul,
+#horizontal-multilevel-menu li:hover ul ul ul,
+#horizontal-multilevel-menu li.jshover ul ul ul,
+#horizontal-multilevel-menu li:hover ul ul ul ul,
+#horizontal-multilevel-menu li.jshover ul ul ul ul,
+#horizontal-multilevel-menu li:hover ul ul ul ul ul,
+#horizontal-multilevel-menu li.jshover ul ul ul ul ul
+{
+	/*top:-999em;*/
+	display:none;
+}
+/*#horizontal-multilevel-menu li:hover ul,*/
+#horizontal-multilevel-menu li.jshover ul,
+#horizontal-multilevel-menu li li:hover ul,
+#horizontal-multilevel-menu li li.jshover ul,
+#horizontal-multilevel-menu li li li:hover ul,
+#horizontal-multilevel-menu li li li.jshover ul,
+#horizontal-multilevel-menu li li li li:hover ul,
+#horizontal-multilevel-menu li li li li.jshover ul,
+#horizontal-multilevel-menu li li li li li:hover ul,
+#horizontal-multilevel-menu li li li li li.jshover ul
+{
+	/*z-index:1000;
+	top:auto;*/
+	display:block;
+}
+
+/*#horizontal-multilevel-menu li:hover ul,*/
+#horizontal-multilevel-menu li.jshover ul,
+#horizontal-multilevel-menu li li:hover ul,
+#horizontal-multilevel-menu li li.jshover ul{
+	display: flex;
+}
+div.menu-clear-left
+{
+	clear:left;
+}
+.container-menu-catalog{
+	margin-bottom: 20px;
+	position: relative;
+}

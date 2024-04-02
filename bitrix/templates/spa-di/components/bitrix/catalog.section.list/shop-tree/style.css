@@ -1,0 +1,25 @@
+.shop-tree .tub-block__item2-activ{
+    border: 0;
+    margin: 0;
+}
+.shop-tree .tub-block__item2:hover{
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #80ada6;
+    background-color: #80ada6;
+    padding: 5px 20px;
+    color: #fff;
+ }
+.shop-tree .tub-block__item2{
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    border: 1px solid #80ada6;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+}
+.shop-tree.tub-block{
+    justify-content: flex-start;
+}

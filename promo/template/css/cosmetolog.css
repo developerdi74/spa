@@ -1,0 +1,159 @@
+.glow-on-hover {
+    width: 100%;
+    height: 50px;
+    border: none;
+    margin: 0px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background: rgb(42,174,166);
+    background: linear-gradient(90deg, rgba(42,174,166,1) 0%, rgba(58,206,241,1) 25%, rgba(104,210,119,1) 86%, rgba(42,174,166,1) 100%);
+    background-size: 400%;
+    filter: blur(0px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    line-height: 0px;
+    border-radius: 25px;
+    margin-top: 25px;
+    max-width: 400px;
+    margin-bottom: 20px;
+
+    box-shadow: inset 0px 0px 4px 0px #ffffff;
+    text-shadow: #535353 0px 3px 3px;
+
+    box-shadow:  0px 0px 4px 0px #fff, -4px 12px 20px -18px #000 inset, 8px -8px 10px -18px #000 inset;
+
+    color: #FEFEFE;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.promo-cosmetolog .cosmetolog_image{
+    background-image: url('../images/cosmetolog_main.jpg');
+    background-size: 100%;
+    width: 100%;
+    background-position: top left;
+    min-height: 308px;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+}
+.promo-cosmetolog{
+    padding: 0px;
+}
+.promo-cosmetolog .section-1 .galka{
+    margin: 20px 15px;
+}
+
+
+.galka>li:before{
+    filter: brightness(0%);
+}
+
+.promo-cosmetolog .section-4 h2{
+    font-size: 24px;
+}
+#modalSaveCosmetolog .modal-header{
+    position: relative;
+    border: none;
+    padding-top: 32px;
+}
+#modalSaveCosmetolog .modal-header .close{
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    margin: 0px;
+    padding: 0px;
+}
+#modalSaveCosmetolog .modal-body{
+    padding-bottom: 32px;
+}
+.promo-cosmetolog .modal-content{
+    border-radius: 0px;
+    padding: 20px;
+}
+#modalSaveCosmetolog .reg-submit button{
+    width: 100%;
+}
+.promo-cosmetolog button:hover{
+    color: #ffffff;
+}
+
+.promo-cosmetolog h1{
+    text-align: center;
+}
+.promo-cosmetolog h1 br{
+    display: none;
+}
+.modal-title{
+    line-height: 1;
+    text-align: center;
+}
+
+@media screen and (max-width: 960px){
+    .promo-cosmetolog .cosmetolog_image{
+    }
+    .promo-cosmetolog .modal-content{
+        padding: 0px;
+    }
+
+    .promo-cosmetolog h1 br{
+        display: inline;
+    }
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .galka>li {
+        font-size: 15px;
+        padding-left: 40px;
+        margin: 30px 0px;
+        line-height: 17px;
+    }
+    .galka>li:before {
+        width: 28px;
+        height: 28px;
+        background-size: 100%;
+        top: 14px;
+    }
+    .promo-cosmetolog .section-4 h2{
+        font-size: 24px;
+    }
+    .promo-cosmetolog .cosmetolog_image{
+        background-size: 140% auto;
+    }
+}
+@media screen and (max-width: 960px){
+
+}

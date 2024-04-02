@@ -1,0 +1,22 @@
+.main-list .list {
+  text-align: center;
+}
+
+.main-list .list .services-slider-thumb {
+  display: inline-block;
+  max-width: 185px;
+}
+
+.main-list .list .services-slider-thumb-description {
+  height: 66px;
+}
+
+.main-list .sm-content {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .main-list .list .services-slider-thumb {
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="spa-di" deleteMissingItems="true" createEmptyFolders="true" exclude="*.svn;*.cvs;.idea;.DS_Store;*.git;*.hg;*.hprof;*.pyc;*.jp*g*;*.png*;*.csv*;*.xml*;*.xls;*.xlsx*;*.svg*;*.doc*;*.db;*.json;cache;backup;managed_cache;img;images;db;database;*.mp*;*.gif*;fonts;widgets;sounds;sound;music;wizards;0*;gadgets;*.xml*;*.ico*;*.txt*;*google*;*yandex*;*.config;*.pdf*;*.log*;*.restore;themes;.css.*;*.eot;.js.*;*.log;*log.txt;.mov;.php.*;*.sql;.tgz;.ttf;.woff*;.zip;.yml;/bitrix/html_pages;/bitrix/sounds;/bitrix/wizards;/bitrix/site_checker_*.log;/cgi-bin;/_*;/webstat;/sitemap;*.rtf*;*.bak;*.back*" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true" notifyRemoteChanges="true" compareModeInSync="TIMESTAMP" showEqualInSync="true" showDifferentInSync="false" showNewOnTargetInSync="false" showExcludedInSync="true">
+    <serverData>
+      <paths name="spa-di">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/public_html/upload" />
+            <excludedPath path="/public_html/local/templates/main/images" />
+            <excludedPath path="/public_html/images" />
+            <excludedPath path="/public_html/bitrix/admin" />
+            <excludedPath path="/public_html/bitrix/blocks" />
+            <excludedPath path="/public_html/bitrix/catalog_export" />
+            <excludedPath path="/public_html/bitrix/components" />
+            <excludedPath path="/public_html/bitrix/css" />
+            <excludedPath path="/public_html/bitrix/js" />
+            <excludedPath path="/public_html/bitrix/legal" />
+            <excludedPath path="/public_html/bitrix/modules" />
+            <excludedPath path="/public_html/bitrix/otp" />
+            <excludedPath path="/public_html/bitrix/panel" />
+            <excludedPath path="/public_html/bitrix/services" />
+            <excludedPath path="/public_html/bitrix/stack_cache" />
+            <excludedPath path="/public_html/bitrix/tmp" />
+            <excludedPath path="/public_html/bitrix/tools" />
+            <excludedPath path="/public_html/bitrix/updates" />
+            <excludedPath path="/public_html/bitrix/.access.php" />
+            <excludedPath path="/public_html/bitrix/.settings.php" />
+            <excludedPath path="/public_html/bitrix/bitrix.php" />
+            <excludedPath path="/public_html/bitrix/composer.json.example" />
+            <excludedPath path="/public_html/bitrix/coupon_activation.php" />
+            <excludedPath path="/public_html/bitrix/footer.php" />
+            <excludedPath path="/public_html/bitrix/header.php" />
+            <excludedPath path="/public_html/bitrix/index.php" />
+            <excludedPath path="/public_html/bitrix/license_key.php" />
+            <excludedPath path="/public_html/bitrix/routing_index.php" />
+            <excludedPath path="/public_html/bitrix/rss.php" />
+            <excludedPath path="/public_html/bitrix/spread.php" />
+            <excludedPath path="/public_html/bitrix/urlrewrite.php" />
+            <excludedPath path="/public_html/bitrix/virtual_file_system.php" />
+            <excludedPath path="/public_html/bitrix/templates/books" />
+            <excludedPath path="/public_html/bitrix/templates/landing24" />
+            <excludedPath path="/public_html/bitrix/templates/main" />
+            <excludedPath path="/public_html/bitrix/templates/print" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="testdali">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>

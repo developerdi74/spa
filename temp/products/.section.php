@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Препараты";
+$arDirProperties = Array(
+
+);
+?>

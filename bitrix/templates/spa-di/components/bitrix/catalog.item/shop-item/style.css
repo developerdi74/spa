@@ -1,0 +1,128 @@
+.shop-card.card:before{
+    content: none;
+    width: 100%;
+    background-size: 100% 100%;
+    background-color: #fff;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+.shop-card.card {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+    border: 2px solid #18a38d;
+    border-radius: 20px;
+    min-height: auto;
+    margin: 0px;
+    padding: 20px;
+    overflow: hidden;
+}
+.shop-card .card__prev{
+    z-index: 100;
+    position: relative;
+    padding: 0px;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    transition: all 2s;
+    transform: translateY(0);
+}
+
+.shop-card .card__img{
+    width: 100%;
+    text-align: center;
+    box-shadow: none;
+    margin: 0px;
+    margin-bottom: 10px;
+    height: auto;
+    overflow: visible;
+
+}
+.shop-card .card__detail{
+    z-index: 100;
+    padding: 38px 5px;
+}
+
+.shop-card .card__detail .card__close{
+     top: 11px;
+}
+.shop-card .card__more:after{
+    content: none;
+}
+
+.shop-card .card__img img{
+    object-fit: contain;
+    width: 100%;
+    height: 150px;
+}
+.shop-card .card__info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-card .card__title{
+    font-size: 16px;
+    font-weight: 900;
+}
+.shop-card .card__bottom{
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+}
+.shop-card .card__bottom>div{
+    width: 100%;
+    text-align: center;
+}
+.shop-card .card__bottom .card__button,.disabled__button{
+    padding: 5px 20px;
+    border: 1px solid #18a38d;
+    border-radius: 40px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    background: none;
+    transition: all 0.5s;
+    font-weight: 700;
+}
+.disabled__button{
+    border: 1px solid #969696;
+    color: #969696;
+    cursor: crosshair;
+}
+.disabled__button:hover{
+    border: 1px solid #969696;
+    color: #969696;
+    cursor: unset;
+    text-decoration: none;
+}
+.QUANTITY{
+    font-size: 10px;
+    color: #969696;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.shop-card .card__bottom .card__button:hover{
+    background-color: #18a38d;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+
+}
+.product-item-small-card .row{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-item-small-card .row .product-item-big-card{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.top.menu_ext.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitrix/php_interface/univers_api/functions.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/spa-di/components/bitrix/catalog.section/dop/template.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitrix/templates/spa-di/components/bitrix/catalog/shop/section_horizontal.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/include/rule.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop/test.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/get/getproducts.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/get/getqtygoods.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/getservices.php" charset="UTF-8" />
+  </component>
+</project>

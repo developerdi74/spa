@@ -1,0 +1,8 @@
+.main-list {
+  text-align: center;
+}
+
+.main-list .articles-slider-thumb {
+  display: inline-block;
+  width: 360px;
+}
