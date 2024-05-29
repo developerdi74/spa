@@ -1,6 +1,7 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
-//https://spa-di.ru/universe/get/getproducts.php
+//https://spa-di.ru/universe/get/getproducts.php - обновить товары и цены
+//https://spa-di.ru/universe/get/getqtygoods.php - обновить количество товаров
 //https://spa-di.ru/universe/get/getproducts.php/?up=1
 \Bitrix\Main\Loader::includeModule('iblock');
 \Bitrix\Main\Loader::includeModule('catalog');
@@ -58,19 +59,19 @@ foreach ($goods as $k=>$serv){
         $servsnew[]=$serv;
     }
 }
-//vd($groups);
 //Для теста удаленных товаров
 //unset($servsnew[0]);
 
 //Синхронизация элементов с базой АПИ, удаление отсутствующих
-//echo deletedServices($servsnew);
+//vd($servsnew);
+echo deletedServices($servsnew,20);
 
 //vd($groups[6697]);
 
 //dd(addSection($groups[3]));
 foreach ($groups as $gr){
     if($gr['is_group']==1){
-        continue;
+        //continue;
         addSection($gr,20,"goods");
     }elseif($gr['is_group']==0){
         addGoods($gr,20);

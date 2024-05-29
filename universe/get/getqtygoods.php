@@ -21,10 +21,10 @@ vd($token);
 if(!$token){
     exit;
 }
-$up=0;
+$up=1;
 $dataT = loadDataUniverse($token,'goods_in_storage',['zero_goods_count'=>0],$up);
+
 $data = $dataT['goods_list'];
-//dd($dataT);
 $listGoods = (getGoodsAll(20));
 
 foreach ($listGoods as $key=>$good){

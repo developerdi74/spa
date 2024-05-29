@@ -6,9 +6,17 @@
     <file url="file://$PROJECT_DIR$/bitrix/templates/spa-di/components/bitrix/catalog.section/dop/template.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bitrix/templates/spa-di/components/bitrix/catalog/shop/section_horizontal.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/include/rule.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/restor2.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop/editor/index.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop/test.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/footer.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/universe/get/getproducts.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/universe/get/getqtygoods.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/universe/getservices.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/header.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/index.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/planning/assets/script.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/planning/detail.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/universe/planning/index.php" charset="UTF-8" />
   </component>
 </project>

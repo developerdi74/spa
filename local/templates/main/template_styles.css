@@ -710,6 +710,80 @@ img.mfp-img {
 .mfp-gallery .mfp-image-holder .mfp-figure {
     cursor: pointer
 }
+.framecontainerPlanning .loader{
+    top: 20%;
+}
+.loaderContainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #999;
+    opacity: 0.7;
+    left: 0px;
+    top: 0px;
+    z-index: 1000000;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #6ebeff #6ebeff transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #337AB7 #337AB7;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+.loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #6ebeff #6ebeff transparent transparent;
+    animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
     .mfp-img-mobile .mfp-image-holder {
@@ -5175,6 +5249,29 @@ html body [button-placement=topRight]{
     width: 66px;
     height: 66px;
 }
+.load-planning{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #146e95;
+    border: 1px solid #7faca5;
+    overflow: hidden;
+    position: fixed;
+    right: 50px;
+    bottom: 210px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0px 0px 5px 6px #7faca5;
+    transition: all 0.4s;
+}
+.load-planning:hover{
+    box-shadow: 0px 0px 0px 0px #7faca5;
+}
+.framecontainer{
+    position: relative;
+
+}
 .idea-podarok{
     position: fixed;
     display:block;
@@ -5192,7 +5289,33 @@ html body [button-placement=topRight]{
     transition: all 0.6s;
     border-radius: 50%;
 }
-
+.framecontainerPlanning{
+    position: fixed;
+    height: 100vh;
+    width: 450px;
+    right: 0px;
+    top: 0px;
+    z-index: 100000;
+    background-color: #fff;
+}
+.widjetPlanning{
+    width: 100%;
+    height: 100vh;
+    background-color: inherit;
+}
+.closeWidjetPlanning{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.closeWidjetPlanning:before, .closeWidjetPlanning:after {content: ""; position: absolute; width: 24px; height: 4px; background: gray;
+    top: 10px;
+    left: 0px;}
+.closeWidjetPlanning:before {transform: rotate(45deg);}
+.closeWidjetPlanning:after {transform: rotate(-45deg);}
 @keyframes flashAnimation {
     0% {transform:scale(0.8);}
     25% {transform:scale(1);}
@@ -5213,7 +5336,18 @@ html body [button-placement=topRight]{
         bottom: 180px;
         right: 20px;
     }
+    .load-planning{
+        right: 20px;
+        bottom: 190px;
+    }
+    .framecontainerPlanning{
+        width: 100%;
+    }
 }
 .b24-widget-button-wrapper .b24-widget-button-position-bottom-right .b24-widget-button-visible .b24-widget-button-bottom{
 
+}
+.info-text{
+    font-size: 12px;
+    color: #b2b2b2;
 }

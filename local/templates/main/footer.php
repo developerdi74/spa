@@ -71,7 +71,16 @@ $APPLICATION->IncludeComponent(
 	</tbody>
 	</table>
 </div>
+    <?if($USER->IsAdmin() || $_GET['show']==1):?>
+    <button class="load-planning">Запись</button>
+    <div class="framecontainerPlanning" style="display: none;">
+        <iframe class="widjetPlanning" id="widjetPlanning" attr-src="/universe/planning/" frameborder="0">
+        </iframe>
+        <span class="closeWidjetPlanning"></span>
+        <div class="loaderContainer" id="preloaderPlanning" style="display: block"><span class="loader"></span></div>
+    </div>
+    <?endif;?>
  </footer>
 
-
-<script src="https://widget.universe-soft.ru/widget/universe-widget.js/145bf031957772a4f03244640641ac34" type="text/javascript" async "utf-8"></script>
+<?php/*
+<script src="https://widget.universe-soft.ru/widget/universe-widget.js/145bf031957772a4f03244640641ac34" type="text/javascript" async "utf-8"></script>*/?>

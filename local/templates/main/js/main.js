@@ -1,4 +1,18 @@
 $(document).ready(function(){
+    //загрузка виджета расписания
+    $('.load-planning').click(function (){
+        let url = $("#widjetPlanning").attr("attr-src")
+        $("#widjetPlanning").attr('src',url);
+        $(".framecontainerPlanning").toggle('slow');
+    });
+    $('.closeWidjetPlanning').click(function (){
+        $(".framecontainerPlanning").toggle('slow');
+    });
+    $("#widjetPlanning").load(function (){
+        console.log('LOAD');
+        $("#preloaderPlanning").remove();
+    })
+
 //form styling
 $('select, input[type=file], input[type=radio], input[type=checkbox]').styler({
     selectSearch: false,

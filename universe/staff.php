@@ -1,12 +1,14 @@
 <?php
-//https://spa-di.ru/universe/staff.php
 require_once($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
+//https://spa-di.ru/universe/getservices.php
+//https://spa-di.ru/universe/getservices.php/?up=1
 \Bitrix\Main\Loader::includeModule('iblock');
 if(!$USER->IsAdmin()){
     echo "ADMIN";
     exit;
 }
-
+$up = isset($_GET['up'])? 1:0;
+$up = 1;
 $session = \Bitrix\Main\Application::getInstance()->getSession();
 
 if (!$session->has('token')){
@@ -15,30 +17,44 @@ if (!$session->has('token')){
 }
 
 $token = $session['token'];
-
+//vd($token);
 if(!$token){
     exit;
 }
 
-$data = loadDataUniverse($token,'get_employees');
-//dd($data);
-$fields=[
-    "first_date"=>"2024-01-01",
-    "last_date"=>"2024-01-31",
-    "employees"=> [1, 2, 3, 10]
-];
-$plannings = loadDataUniverse($token,'emp_free_time',$fields,1);
-//vd($plannings);
-$staffs = $data['Employees'];
+$data = loadDataUniverse($token,'get_employees',null,$up);
+dd($data);
+$services = $data['booking_services'];
 
-foreach ($staffs as $key=>$staff){
-    if(empty($staff['first_name']) || empty($staff['last_name']) || $staff['first_name'] == "*"){
-        unset($staffs[$key]);
+//dd($services);
+$groups=[];
+
+//dd($services);
+foreach ($services as $k=>$serv){
+    if($serv['parent_id'] == 2){
+        unset($serv['parent_id']);
+    }
+    if($serv['service_id'] == 2){
         continue;
     }
-    //$staffs[$key]['services']=count($staff['services']);
+    $id = $serv['service_id'];
+    $groups[$id]=$serv;
+    if($serv['is_group']==0){
+        $servsnew[]=$serv;
+    }
 }
-dd($staffs);
+//Для теста удаленных услуг
+//unset($servsnew[0]);
+echo deletedServices($servsnew,19);
+//vd($groups[6697]);
 
+//dd(addSection($groups[3]));
+foreach ($groups as $gr){
+    if($gr['is_group']==1){
+        addSection($gr,19,"services");
+    }elseif($gr['is_group']==0){
+        addElement($gr,19);
+    }
+}
 ?>
 

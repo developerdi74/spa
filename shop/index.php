@@ -153,7 +153,7 @@ $APPLICATION->SetTitle("Магазин");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Товары",
-		"PAGE_ELEMENT_COUNT" => "30",
+		"PAGE_ELEMENT_COUNT" => "32",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRICE_CODE" => array(
 			0 => "BASE",
@@ -234,7 +234,7 @@ $APPLICATION->SetTitle("Магазин");
 		"USE_GIFTS_SECTION" => "Y",
 		"USE_MAIN_ELEMENT_SECTION" => "Y",
 		"USE_PRICE_COUNT" => "N",
-		"USE_PRODUCT_QUANTITY" => "Y",
+		"USE_PRODUCT_QUANTITY" => "N",
 		"USE_SALE_BESTSELLERS" => "Y",
 		"USE_STORE" => "N",
 		"FILE_404" => "",

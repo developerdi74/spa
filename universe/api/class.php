@@ -11,7 +11,7 @@ class apiPlanning{
         }
         $data = self::getTree($sects);
         $data = array_values($data);
-        return json_encode($data);
+        return $data;
     }
     public static function getSections(){
         $arFilter = Array(
@@ -71,16 +71,16 @@ class apiPlanning{
     public static function buildMenu($tree){
         $html="<ul>";
         foreach ($tree as $item){
-            if(isset($item['childs'])){
+            if(isset($item['childs']) && !empty($item['childs'])){
                 $html .= "<li><a href = '{$item['id']}'>{$item['name']}</a>";
                 $html .= self::buildMenu($item['childs']);
-                $html .= '<li>';
+                $html .= '</li>';
             }else{
                 $html .= "<li><a href = '{$item['id']}'>{$item['name']}</a>";
             }
         }
         $html.="</ul>";
-    return $html;
-}
+        return $html;
+    }
 }
 ?>

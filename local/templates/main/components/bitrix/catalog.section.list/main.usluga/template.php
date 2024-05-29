@@ -24,9 +24,9 @@ $this->setFrameMode(true);
             <div class="services-slider-thumb">
               <div class="services-slider-thumb-photo">
                 <?if( $file = CFile::ResizeImageGet( $arItem['PICTURE'], array('width'=>213,'height'=>240), BX_RESIZE_IMAGE_EXACT, false, false, false, 100 ) ):?>
-                  <img src="<?=$file['src']?>" alt="<?=$arPic['ALT']?>">
+                  <img height="154" width="137" src="<?=$file['src']?>" alt="<?=$arPic['ALT']?>">
                 <?else:?>
-                  <img src="<?=SITE_TEMPLATE_PATH?>/images/tmb-service-noimage.png" alt="">
+                  <img height="154" width="137" src="<?=SITE_TEMPLATE_PATH?>/images/tmb-service-noimage.png" alt="">
                 <?endif?>
               </div>
               <div class="services-slider-thumb-description">

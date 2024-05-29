@@ -187,9 +187,10 @@ function getGoodsAll($ibl){
 function loadDataUniverse($token,$method,$fields=null, $update=0){
     $dataFile = json_decode(file_get_contents($method.'.json'), true);
     if(!empty($dataFile) && $update==0){
+        //echo "NOT UPDATE";
         return $dataFile;
     }
-    echo "Обновление<br>";
+    //echo "Обновление<br>";
     $url = "https://94.24.239.206:9100/api/v1";
     $username = "drugizm12";
     $password = "ODkEP3Q9";
@@ -219,8 +220,16 @@ function loadDataUniverse($token,$method,$fields=null, $update=0){
     return json_decode($result, true);
 }
 
+/*
+ * Проверка и удаление товаров которые отсутствуют в загрузки из АПИ
+ * @$servs - входщий массив элементов из АПИ
+ * @$ibl - номер ИБ для проверки
+ * @$keyItem - ключ проверки ID элементов
+ *
+*/
 function deletedServices($servs,$ibl){
-    $arSelect = array("ID", "NAME","PROPERTY_PRICE","PROPERTY_UF_UNVERS_ID");
+    $keyItem=($ibl==20)? 'goods_id': 'service_id';
+    $arSelect = array("ID", "NAME","PROPERTY_PRICE","PROPERTY_UF_UNVERS_ID","IBLOCK_SECTION_ID");
     $arFilter = array("IBLOCK_ID" => $ibl);
     //vd($servs[15]);
     $res = CIBlockElement::GetList(array(), $arFilter, false, false, $arSelect);
@@ -228,11 +237,14 @@ function deletedServices($servs,$ibl){
         $arFields = $ob->GetFields();
         $data[]= $arFields;
     }
-    //vd($data[15]);
+    //vd($data);
     $i=0;
     foreach ($data as $item){
+        if($item['PROPERTY_UF_UNVERS_ID_VALUE']==NULL && $ibl==19){
+            continue;
+        }
         foreach ($servs as $serv){
-            if($item['PROPERTY_UF_UNVERS_ID_VALUE'] == $serv['service_id']){
+            if($item['PROPERTY_UF_UNVERS_ID_VALUE'] == $serv[$keyItem]){
                 //echo "<br>OK ".$item['ID'];
                 continue 2;
             }
@@ -276,6 +288,9 @@ function msg($data){
     echo $data;
     echo "<br>";
 }
+function msgl($data){
+    echo $data;
+}
 function setCountGoods($id, $qty){
     $arFields = array(
         "ID" => $id,
@@ -301,4 +316,15 @@ function replacerName($name){
 
     return (str_replace($arr,"",$name));
 }
+function validateInput($data,$max = 17)
+{
+    if (strlen($data) < 2 || strlen($data) > $max) {
+        return null;
+    }
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 ?>

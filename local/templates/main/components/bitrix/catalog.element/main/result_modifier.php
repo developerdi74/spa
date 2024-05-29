@@ -125,7 +125,7 @@ if( $arResult['DISPLAY_PROPERTIES']['PRODUCT_ID']['~VALUE'] && count($arResult['
 
 //if($USER->IsAdmin()):
     if( $arResult['DISPLAY_PROPERTIES']['PRICE_SECTION']['VALUE']) {
-        $arSelect = array( 'ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_UF_UNVERS_ID');
+        $arSelect = array( 'ID', 'NAME','PREVIEW_TEXT', 'PROPERTY_PRICE', 'PROPERTY_UF_UNVERS_ID');
         $arFilter = array( 'IBLOCK_ID' => 19,
             'ACTIVE' => 'Y',
             'SECTION_ID' => $arResult['DISPLAY_PROPERTIES']['PRICE_SECTION']['VALUE'],
@@ -136,6 +136,7 @@ if( $arResult['DISPLAY_PROPERTIES']['PRODUCT_ID']['~VALUE'] && count($arResult['
             $arResult['DISPLAY_PROPERTIES']['PRICE_SECTION']['DATA'][] = array(
                 'ID' => $ob['ID'],
                 'NAME' => $ob['NAME'],
+                'TEXT' => $ob['PREVIEW_TEXT'],
                 'PRICE' => $ob['PROPERTY_PRICE_VALUE'],
                 'UF_UNVERS_ID' => $ob['PROPERTY_UF_UNVERS_ID_VALUE'],
             );

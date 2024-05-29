@@ -112,4 +112,20 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/ymarket/index.php',
     'SORT' => 100,
   ),
+    14 =>
+        array (
+            'CONDITION' => '#^/shop/#',
+            'RULE' => '',
+            'ID' => 'bitrix:catalog',
+            'PATH' => '/shop/index.php',
+            'SORT' => 100,
+        ),
+    19 =>
+        array (
+            'CONDITION' => '#^/universe/planning/#',
+            'RULE' => 'ELEMENT_CODE=$1',
+            'ID' => 'flik:universe',
+            'PATH' => '/universe/planning/detail.php',
+            'SORT' => 100,
+        ),
 );

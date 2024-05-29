@@ -213,7 +213,11 @@ $this->setFrameMode(true);
                 <?foreach( $arResult['DISPLAY_PROPERTIES']['PRICE_SECTION']['DATA'] as $k=>$a ):
                     if($a["PRICE"]==0) continue;?>
                     <tr>
-                        <td><?=$a["NAME"]?>
+                        <td>
+                            <?=$a["NAME"]?>
+                            <?if(!empty($a["TEXT"])):?>
+                                <div class="info-text"><?=$a["TEXT"]?></div>
+                            <?endif;?>
                             <? /*<a class="js-universe-widget-good" id=""  data-universe-good-id="<?=$a["UF_UNVERS_ID"]?>"><?=$a["NAME"]?></a> */?>
                         </td>
                         <td>
